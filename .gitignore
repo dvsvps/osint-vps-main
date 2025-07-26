@@ -1,0 +1,4 @@
+breachbox/data/raw-dumps/
+breachbox/data/parquet/
+breachbox/logs/
+reconbox/results/
