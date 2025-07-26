@@ -1,0 +1,14 @@
+
+# Routing security
+routing/vpn/*.ovpn
+routing/vpn/*.conf
+routing/vpn/*.key
+routing/vpn/*.crt
+routing/tor/hidden_service/
+routing/tor/*.key
+routing/tor/*.auth
+routing/**/*.log
+routing/**/*.out
+routing/**/*.tmp
+routing/**/.DS_Store
+routing/**/*~
