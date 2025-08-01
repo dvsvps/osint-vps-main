@@ -1,0 +1,22 @@
+nohup: ignoring input
+Jul 26 13:41:04.970 [notice] Tor 0.4.8.17 running on Linux with Libevent 2.1.8-stable, OpenSSL 1.1.1k, Zlib 1.2.11, Liblzma 5.2.4, Libzstd 1.4.4 and Glibc 2.28 as libc.
+Jul 26 13:41:04.970 [notice] Tor can't help you if you use it wrong! Learn how to be safe at https://support.torproject.org/faq/staying-anonymous/
+Jul 26 13:41:04.970 [notice] Read configuration file "/opt/osint-vps/routing/tor/torrc".
+Jul 26 13:41:04.972 [warn] ControlPort is open, but no authentication method has been configured.  This means that any program on your computer can reconfigure your Tor.  That's bad!  You should upgrade your Tor controller as soon as possible.
+Jul 26 13:41:04.973 [notice] Opening Socks listener on 127.0.0.1:9050
+Jul 26 13:41:04.973 [notice] Opened Socks listener connection (ready) on 127.0.0.1:9050
+Jul 26 13:41:04.973 [notice] Opening Control listener on 127.0.0.1:9051
+Jul 26 13:41:04.973 [notice] Opened Control listener connection (ready) on 127.0.0.1:9051
+Jul 26 13:41:04.000 [notice] Parsing GEOIP IPv4 file /usr/share/tor/geoip.
+Jul 26 13:41:05.000 [notice] Parsing GEOIP IPv6 file /usr/share/tor/geoip6.
+Jul 26 13:41:05.000 [notice] Set list of supported TLS groups to: P-256:X25519:P-224
+Jul 26 13:41:05.000 [notice] Bootstrapped 0% (starting): Starting
+Jul 26 13:41:06.000 [notice] Starting with guard context "default"
+Jul 26 13:41:07.000 [notice] Bootstrapped 5% (conn): Connecting to a relay
+Jul 26 13:41:07.000 [notice] Bootstrapped 10% (conn_done): Connected to a relay
+Jul 26 13:41:07.000 [notice] Bootstrapped 14% (handshake): Handshaking with a relay
+Jul 26 13:41:07.000 [notice] Bootstrapped 15% (handshake_done): Handshake with a relay done
+Jul 26 13:41:07.000 [notice] Bootstrapped 75% (enough_dirinfo): Loaded enough directory info to build circuits
+Jul 26 13:41:07.000 [notice] Bootstrapped 90% (ap_handshake_done): Handshake finished with a relay to build circuits
+Jul 26 13:41:07.000 [notice] Bootstrapped 95% (circuit_create): Establishing a Tor circuit
+Jul 26 13:41:07.000 [notice] Bootstrapped 100% (done): Done

@@ -1,0 +1,46 @@
+# clean_socials.py
+import json, pathlib
+
+infile  = pathlib.Path("output/result.json")
+outfile = pathlib.Path("output/clean_socials.json")
+
+wanted_blocks = {"Social media", "Reputation"}   # blocks we care about
+
+current = None
+rows    = []
+
+for raw in infile.open(encoding="utf-8"):
+    line = raw.strip()
+
+    # new major section resets sub-block
+    if line.startswith("Results for"):
+        current = None
+        continue
+
+    # detect “Social media:”  /  “Reputation:”  lines
+    if line.endswith(":"):
+        current = line.rstrip(":")
+        continue
+
+    # collect URLs inside wanted blocks
+    if current in wanted_blocks and line.startswith("URL:"):
+        rows.append({"category": current, "url": line.split("URL:", 1)[1].strip()})
+
+# write JSON
+outfile.write_text(json.dumps(rows, indent=2))
+print(f"✅  Extracted {len(rows)} URLs → {outfile}")
+# clean_socials.py
+import re, sys
+
+infile  = "output/result.json"
+wanted  = ("Social media", "Reputation")
+
+section = None
+for line in open(infile, encoding="utf-8"):
+    m = re.match(r"Results for (.+)", line)
+    if m:
+        section = m.group(1)
+        continue
+    if line.startswith("URL:") and section in wanted:
+        print(f"{section}\t{line.split('URL:')[1].strip()}")
+
